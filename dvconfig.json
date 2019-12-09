@@ -1,0 +1,17 @@
+{
+  "name": "secretparty",
+  "usedConcepts": {
+    "passkey": {},
+    "event": {},
+    "geolocation": {
+      "config": {
+        "mapType": "leaflet"
+      }
+    },
+    "comment": {}
+  },
+  "routes": [
+    { "path": "", "component": "landing" },
+    { "path": "/party", "component": "party" }
+  ]
+}

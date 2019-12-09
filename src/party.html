@@ -1,0 +1,16 @@
+<dv.component name="party">
+  <passkey.logged-in />
+  <h1>{{passkey.logged-in.passkey?.code}}</h1>
+  <event.show-event id=passkey.logged-in.passkey?.id waitOn=['id'] />
+  <geolocation.show-marker id=passkey.logged-in.passkey?.id hidden=true />
+  <geolocation.display-map
+    markers=[geolocation.show-marker.loadedMarker] expectMarkers=true />
+  <h2>Comments</h2>
+  <dv.tx>
+    <dv.link />
+    <comment.create-comment targetId=passkey.logged-in.passkey?.id
+      authorId="anonymous" />
+  </dv.tx>
+  <comment.show-comments ofTargetId=passkey.logged-in.passkey?.id
+    showId=false showTargetId=false />
+</dv.component>
