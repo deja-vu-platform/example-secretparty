@@ -1,6 +1,13 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import "~bootstrap/dist/css/bootstrap.min.css";
-
+@import "~@deja-vu/themes/scss/minimalist.scss";
+// required by geolocation
 @import "~leaflet/dist/leaflet.css";
 @import "~leaflet-routing-machine/dist/leaflet-routing-machine.css";
 @import "~leaflet-control-geocoder/dist/Control.Geocoder.css";
+
+main {
+  margin: 30px;
+}
+
+.map {
+  width: 200px;
+}

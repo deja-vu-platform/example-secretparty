@@ -3,7 +3,11 @@
   "usedConcepts": {
     "passkey": {},
     "event": {},
-    "geolocation": {},
+    "geolocation": {
+      "config": {
+        "mapType": "leaflet"
+      }
+    },
     "chat": {}
   },
   "routes": [

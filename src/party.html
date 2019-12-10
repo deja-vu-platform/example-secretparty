@@ -1,13 +1,17 @@
 <dv.component name="party">
-  <passkey.logged-in />
-  <h1>{{passkey.logged-in.passkey?.code}}</h1>
-  <event.show-event id=passkey.logged-in.passkey?.id waitOn=['id'] />
-  <geolocation.show-marker id=passkey.logged-in.passkey?.id hidden=true />
-  <geolocation.display-map
-    markers=[geolocation.show-marker.loadedMarker] expectMarkers=true />
-  <h2>Chat</h2>
-  <chat.show-chat id=passkey.logged-in.passkey?.id
-    showId=false showMessageId=false />
-  <chat.create-message authorId="anonymous"
-    chatId=passkey.logged-in.passkey?.id />
+  <main>
+    <passkey.logged-in />
+    <h1>{{passkey.logged-in.passkey?.code}}</h1>
+    <event.show-event id=passkey.logged-in.passkey?.id waitOn=['id'] />
+    <geolocation.show-marker id=passkey.logged-in.passkey?.id hidden=true />
+    <div class="map">
+      <geolocation.display-map
+        markers=[geolocation.show-marker.loadedMarker] expectMarkers=true />
+    </div>
+    <h2>Chat</h2>
+    <chat.show-chat id=passkey.logged-in.passkey?.id
+      showId=false showMessageId=false />
+    <chat.create-message authorId="anonymous"
+      chatId=passkey.logged-in.passkey?.id />
+  </main>
 </dv.component>

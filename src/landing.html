@@ -1,16 +1,20 @@
 <dv.component name="landing">
-  <h1>View Party</h1>
-  <dv.tx>
-    <passkey.sign-in /><dv.link href="/party" />
-  </dv.tx>
-  <h1>New Party</h1>
-  <dv.tx>
-    <dv.gen-id /><dv.status />
-    <passkey.create-passkey id=dv.gen-id.id randomPassword=true
-      showOptionToSubmit=false />
-    <event.create-event id=dv.gen-id.id showOptionToSubmit=false />
-    <geolocation.create-marker-from-map id=dv.gen-id.id
-      showOptionToSubmit=false />
-    <dv.button-link href="/party">Create Party</dv.button-link>
-  </dv.tx>
+  <main>
+    <h1>View Party</h1>
+    <dv.tx>
+      <passkey.sign-in /><dv.link href="/party" />
+    </dv.tx>
+    <h1>New Party</h1>
+    <dv.tx>
+      <dv.gen-id /><dv.status />
+      <passkey.create-passkey id=dv.gen-id.id randomPassword=true
+        showOptionToSubmit=false />
+      <event.create-event id=dv.gen-id.id showOptionToSubmit=false />
+      <div class="map">
+        <geolocation.create-marker-from-map id=dv.gen-id.id
+          showOptionToSubmit=false />
+      </div>
+      <dv.button-link href="/party">Create Party</dv.button-link>
+    </dv.tx>
+  </main>
 </dv.component>
