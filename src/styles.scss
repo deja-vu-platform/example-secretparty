@@ -4,10 +4,7 @@
 @import "~leaflet-routing-machine/dist/leaflet-routing-machine.css";
 @import "~leaflet-control-geocoder/dist/Control.Geocoder.css";
 
-main {
-  margin: 30px;
-}
-
-.map {
-  width: 200px;
-}
+main { margin: 30px; }
+.side-by-side { display: flex; }
+.map { height: 300px !important; }
+.evt { margin-right: 20px; }
